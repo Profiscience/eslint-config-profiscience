@@ -10,6 +10,6 @@
   "author": "Casey Webb <notcaseywebb@gmail.com>",
   "license": "WTFPL",
   "dependencies": {
-    "babel-eslint": "^6.0.4"
+    "babel-eslint": "^7.0.0"
   }
 }
