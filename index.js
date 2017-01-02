@@ -21,16 +21,9 @@ module.exports = {
     'arrow-spacing': 2,
     'comma-dangle': 0,
     'key-spacing': [2, {
-      singleLine: {
-        beforeColon: false,
-        afterColon: true,
-        mode: 'strict'
-      },
-      mulitLine: {
-        beforeColon: false,
-        afterColon: true,
-        mode: 'minimum'
-      }
+      beforeColon: false,
+      afterColon: true,
+      mode: 'minimum'
     }],
     'no-console': 1,
     'no-const-assign': 2,
