@@ -11,6 +11,10 @@ module.exports = {
 
   parser: 'babel-eslint',
 
+  plugins: [
+    'formatting'
+  ],
+
   rules: {
     'array-bracket-spacing': [2, 'never'],
     'arrow-parens': [2, 'always'],
@@ -30,6 +34,8 @@ module.exports = {
     'space-before-function-paren': [2, 'never'],
     'strict': [1, 'global'],
     'object-curly-spacing': [2, 'always'],
-    'array-bracket-spacing': [2, 'never']
+    'array-bracket-spacing': [2, 'never'],
+
+    'formatting/newline-object-in-array': 2
   }
 }
