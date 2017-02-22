@@ -11,6 +11,7 @@
   "license": "WTFPL",
   "dependencies": {
     "babel-eslint": "^7.1.1",
+    "eslint": "^3.16.0",
     "eslint-plugin-formatting": "0.0.4"
   },
   "peerDependencies": {
