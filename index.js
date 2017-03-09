@@ -78,6 +78,11 @@ module.exports = {
     //   ignore: [-1, 0, 1, 2]
     // }],
     'no-multi-spaces': ERROR,
+    'no-multiple-empty-lines': [ERROR, {
+      max: 2,
+      maxBOF: 0,
+      maxEOF: 1
+    }],
     'no-new-func': ERROR,
     'no-new-wrappers': ERROR,
     'no-return-assign': ERROR,
