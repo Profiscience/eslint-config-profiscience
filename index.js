@@ -33,7 +33,7 @@ module.exports = {
     'dot-location': [WARN, 'property'],
     'dot-notation': WARN,
     'eqeqeq': [WARN, 'smart'],
-    'indent': [WARN, WARN],
+    'indent': [WARN, 2],
     'key-spacing': [WARN, {
       beforeColon: false,
       afterColon: true,
