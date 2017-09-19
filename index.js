@@ -89,6 +89,7 @@ module.exports = {
     'no-self-compare': ERROR,
     'no-sequences': ERROR,
     'no-throw-literal': ERROR,
+    'no-trailing-spaces': WARN,
     'no-unmodified-loop-condition': WARN,
     'no-unused-expressions': [WARN, {
       'allowTernary': true
