@@ -14,16 +14,14 @@ module.exports = {
 
   parser: 'babel-eslint',
 
+  plugins: [
+    'formatting'
+  ],
+
   rules: {
     'accessor-pairs': ERROR,
-    'array-bracket-newline': [WARN, {
-      multiline: true
-    }],
     'array-bracket-spacing': [WARN, 'never'],
     'array-callback-return': WARN,
-    'array-element-newline': [WARN, {
-      multiline: true
-    }],
     'arrow-body-style': [WARN, 'as-needed'],
     'arrow-parens': [WARN, 'always'],
     'arrow-spacing': WARN,
@@ -114,6 +112,8 @@ module.exports = {
     'strict': [ERROR, 'global'],
     'yoda': [WARN, 'never', {
       exceptRange: true
-    }]
+    }],
+
+    'formatting/newline-object-in-array': WARN
   }
 }
