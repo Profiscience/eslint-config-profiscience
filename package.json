@@ -9,9 +9,6 @@
   ],
   "author": "Casey Webb <notcaseywebb@gmail.com>",
   "license": "WTFPL",
-  "dependencies": {
-    "eslint-plugin-formatting": "0.0.4"
-  },
   "peerDependencies": {
     "eslint": "^4.0.0"
   }
