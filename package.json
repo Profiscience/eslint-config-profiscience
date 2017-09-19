@@ -11,5 +11,8 @@
   "license": "WTFPL",
   "peerDependencies": {
     "eslint": "^4.0.0"
+  },
+  "dependencies": {
+    "babel-eslint": "^8.0.0"
   }
 }

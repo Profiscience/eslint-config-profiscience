@@ -12,6 +12,8 @@ module.exports = {
     es6: true
   },
 
+  parser: 'babel-eslint',
+
   rules: {
     'accessor-pairs': ERROR,
     'array-bracket-newline': [WARN, {
