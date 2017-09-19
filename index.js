@@ -77,7 +77,9 @@ module.exports = {
     //   ignoreArrayIndexes: true,
     //   ignore: [-1, 0, 1, 2]
     // }],
-    'no-multi-spaces': WARN,
+    'no-multi-spaces': [WARN, {
+      ignoreEOLComments: treu
+    }],
     'no-multiple-empty-lines': [WARN, {
       max: 2,
       maxBOF: 0,
