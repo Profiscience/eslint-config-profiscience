@@ -12,8 +12,6 @@ module.exports = {
     es6: true
   },
 
-  parser: 'babel-eslint',
-
   plugins: [
     'formatting'
   ],
