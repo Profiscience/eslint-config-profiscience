@@ -108,7 +108,11 @@ module.exports = {
     'require-await': ERROR,
     'semi': [WARN, 'never'],
     'space-before-blocks': WARN,
-    'space-before-function-paren': [WARN, 'never'],
+    'space-before-function-paren': [WARN, {
+      anonymous: 'never',
+      named: 'never',
+      asyncArrow: 'always'
+    }],
     'space-in-parens': WARN,
     'space-infix-ops': WARN,
     'strict': [ERROR, 'global'],
