@@ -11,9 +11,15 @@
   "license": "WTFPL",
   "dependencies": {
     "babel-eslint": "^8.0.0",
-    "eslint-plugin-formatting": "0.0.4"
+    "eslint-plugin-formatting": "0.0.4",
+    "snyk": "^1.117.1"
   },
   "peerDependencies": {
     "eslint": "^4.0.0"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
