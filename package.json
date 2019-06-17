@@ -10,7 +10,7 @@
   "author": "Casey Webb <notcaseywebb@gmail.com>",
   "license": "WTFPL",
   "dependencies": {
-    "babel-eslint": "^8.0.0",
+    "babel-eslint": "^9.0.0",
     "eslint-plugin-formatting": "0.0.4"
   },
   "peerDependencies": {
