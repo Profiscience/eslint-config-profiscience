@@ -1,19 +1,21 @@
 {
   "name": "eslint-config-profiscience",
-  "version": "2.0.4",
+  "version": "3.0.0",
   "description": "Shareable ESLint Config for Profisciencē",
   "main": "index.js",
   "keywords": [
     "eslint",
     "eslintconfig"
   ],
-  "author": "Casey Webb <notcaseywebb@gmail.com>",
+  "author": "Casey Webb <notcaseywebb@gmail.com> (https://caseyWebb.xyz)",
   "license": "WTFPL",
   "dependencies": {
-    "babel-eslint": "^8.0.0",
-    "eslint-plugin-formatting": "0.0.4"
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
+    "eslint-config-prettier": "^5.0.0"
   },
   "peerDependencies": {
-    "eslint": "^4.0.0"
+    "eslint": "^5.0.0",
+    "prettier": "^1.0.0"
   }
 }
