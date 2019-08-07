@@ -19,7 +19,7 @@ steps:
         from_secret: GIT_SSH_KEY
     commands:
       - apt-get update
-      - apt-get install openssh
+      - apt-get install -y openssh
       - mkdir ~/.ssh
       - echo $$GIT_SSH_KEY >> ~/.ssh/id_rsa
       - chmod 700 ~/.ssh
