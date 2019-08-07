@@ -23,7 +23,7 @@ steps:
       - chmod 700 ~/.ssh
       - chmod 600 ~/.ssh/*
       - cd ~
-      - ls -al
+      - ls -al .ssh
       - pwd
       - ssh -vvv git@github.com
       - git config --global user.name "Drone CI"
