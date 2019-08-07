@@ -22,11 +22,11 @@ steps:
       - echo $$GIT_SSH_KEY >> ~/.ssh/id_rsa
       - chmod 700 ~/.ssh
       - chmod 600 ~/.ssh/*
-      - git config --global user.name "Casey Webb"
-      - git config --global user.email notcaseywebb@gmail.com
+      - git config --global user.name "Drone CI"
+      - git config --global user.email buildbot@ci.caseywebb.xyz
       - git remote set-url origin git@github.com:Profiscience/eslint-config-profiscience.git
       - npm version patch
-      - git push --follow-tags origin master
+      - git push -vT --follow-tags origin master
 
   - name: publish
     image: plugins/npm
