@@ -24,7 +24,7 @@ steps:
       - git config --global user.email buildbot@ci.caseywebb.xyz
       - git remote set-url origin git@github.com:Profiscience/eslint-config-profiscience.git
       - npm version patch
-      - git push --follow-tags
+      - git push --follow-tags origin master
 
   - name: publish
     image: plugins/npm
