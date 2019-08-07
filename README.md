@@ -6,7 +6,7 @@
 - 2 spaces
 - single-quotes
 - strict mode
-- *always* use braces
+- _always_ use braces
 - prefer arrow functions
 - use `const` and `let`, prefer `const`
 - use `===` and `!==`
@@ -17,6 +17,7 @@
 ## Functions
 
 ### Named functions
+
 - no space after function name
 - 1 space after function parens
 
@@ -27,6 +28,7 @@ function foo(bar, baz) {
 ```
 
 ### Anonymous (Arrow) Functions
+
 - 1 space before and after arrow
 - no superfluous `return`
 
@@ -36,8 +38,12 @@ const foo = (bar, baz) => foo + bar
 const foo = (bar, baz) => ({ bar, baz })
 
 // bad
-const foo = (bar, baz) => { return foo + bar }
-const foo = (bar, baz) => { return { bar, baz } }
+const foo = (bar, baz) => {
+  return foo + bar
+}
+const foo = (bar, baz) => {
+  return { bar, baz }
+}
 ```
 
 ### Function Chains
@@ -46,7 +52,10 @@ Function chains longer than 3 should be broken onto new lines
 
 ```javascript
 // good
-_(foos).map(transformFoos).filter(applyFilter).value()
+_(foos)
+  .map(transformFoos)
+  .filter(applyFilter)
+  .value()
 _(foos)
   .map(transformFoos)
   .filter(applyFilter)
@@ -54,5 +63,9 @@ _(foos)
   .value()
 
 // bad
-_(foos).map(transformFoos).filter(applyFilter).map(transformFoosAgain).value()
+_(foos)
+  .map(transformFoos)
+  .filter(applyFilter)
+  .map(transformFoosAgain)
+  .value()
 ```
