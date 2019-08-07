@@ -18,6 +18,7 @@ steps:
       GIT_SSH_KEY:
         from_secret: GIT_SSH_KEY
     commands:
+      - eval "$(ssh-agent -s)"
       - mkdir ~/.ssh
       - echo $$GIT_SSH_KEY >> ~/.ssh/id_rsa
       - chmod 700 ~/.ssh
