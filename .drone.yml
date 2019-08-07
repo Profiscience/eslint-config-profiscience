@@ -12,9 +12,9 @@ steps:
       event:
         - push
     commands:
-      - npm version patch
       - git config --global user.name "Drone CI"
       - git config --global user.email buildbot@ci.caseywebb.xyz
+      - npm version patch
       - git push --tags
 
   - name: publish
