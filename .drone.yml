@@ -23,7 +23,7 @@ steps:
     image: appleboy/drone-git-push
     <<: *on_push
     settings:
-      remote_origin: origin
+      remote_name: origin
       follow_tags: true
 
   - name: publish
