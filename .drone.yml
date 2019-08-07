@@ -22,7 +22,7 @@ steps:
       - echo $$GIT_PUSH_SSH_KEY >> ~/.ssh/id_rsa
       - git config --global user.name "Drone CI"
       - git config --global user.email buildbot@ci.caseywebb.xyz
-      - git remote set origin git@github.com:Profiscience/eslint-config-profiscience.git
+      - git remote set-url origin git@github.com:Profiscience/eslint-config-profiscience.git
       - npm version patch
       - git push --follow-tags
 
