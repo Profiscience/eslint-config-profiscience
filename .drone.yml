@@ -12,18 +12,16 @@ trigger:
 
 steps:
   - name: bump
-    image: node:lts
+    image: node:latest
     <<: *on_push
     environment:
       GIT_SSH_KEY:
         from_secret: GIT_SSH_KEY
     commands:
-      - eval "$(ssh-agent -s)"
       - mkdir ~/.ssh
       - echo $$GIT_SSH_KEY >> ~/.ssh/id_rsa
       - chmod 700 ~/.ssh
       - chmod 600 ~/.ssh/*
-      - ssh-add
       - cd ~
       - ls -al .ssh
       - pwd
