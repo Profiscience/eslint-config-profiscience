@@ -23,8 +23,8 @@ steps:
     image: appleboy/drone-git-push
     <<: *on_push
     settings:
-      remote_name: origin
-      follow_tags: true
+      remote: git@github.com:Profiscience/eslint-config-profiscience.git
+      followtags: true
 
   - name: publish
     image: plugins/npm
