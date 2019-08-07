@@ -23,6 +23,7 @@ steps:
       - chmod 700 ~/.ssh
       - chmod 600 ~/.ssh/*
       - echo "" > /etc/ssh/ssh_config
+      - systemctl restart ssh
       - cat /etc/ssh/ssh_config
       - ssh -i ~/.ssh/id_rsa -vvvvv git@github.com
       - git config --global user.name "Drone CI"
