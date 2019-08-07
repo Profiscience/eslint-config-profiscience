@@ -14,17 +14,16 @@ steps:
   - name: bump
     image: node:lts
     <<: *on_push
+    environment:
+      GIT_PUSH_SSH_KEY:
+        from_secret: GIT_PUSH_SSH_KEY
     commands:
+      - echo $$GIT_PUSH_SSH_KEY >> ~/.ssh/id_rsa
       - git config --global user.name "Drone CI"
       - git config --global user.email buildbot@ci.caseywebb.xyz
+      - git remote set origin git@github.com:Profiscience/eslint-config-profiscience.git
       - npm version patch
-
-  - name: push
-    image: appleboy/drone-git-push
-    <<: *on_push
-    settings:
-      remote: git@github.com:Profiscience/eslint-config-profiscience.git
-      followtags: true
+      - git push --follow-tags
 
   - name: publish
     image: plugins/npm
