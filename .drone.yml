@@ -6,8 +6,20 @@ trigger:
     - master
 
 steps:
-  - name: publish:npm
+  - name: bump
+    image: node:lts-alpine
+    when:
+      event:
+        - push
+    commands:
+      - npm version patch
+      - git push --tags
+
+  - name: publish
     image: plugins/npm
+    when:
+      event:
+        - tag
     settings:
       token:
         from_secret: NPM_TOKEN
