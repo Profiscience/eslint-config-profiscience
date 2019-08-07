@@ -1,0 +1,18 @@
+kind: pipeline
+name: default
+
+trigger:
+  branch:
+    - master
+
+steps:
+  - name: publish:npm
+    image: plugins/npm
+    settings:
+      token:
+        from_secret: NPM_TOKEN
+
+---
+kind: secret
+name: NPM_TOKEN
+data: Yy4txZ8nNaIirwbldt0l8P1vJjo/Tv6NWuqBjx6oXsROA2HjKxxLHCEHSkrCfjmxhHzjGr8ebsv5gdw3RPztbQ==
