@@ -12,12 +12,14 @@ trigger:
 
 steps:
   - name: bump
-    image: node:latest
+    image: node:lts
     <<: *on_push
     environment:
       GIT_SSH_KEY:
         from_secret: GIT_SSH_KEY
     commands:
+      - apt-get update
+      - apt-get install openssh
       - mkdir ~/.ssh
       - echo $$GIT_SSH_KEY >> ~/.ssh/id_rsa
       - chmod 700 ~/.ssh
