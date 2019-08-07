@@ -7,7 +7,7 @@ trigger:
 
 steps:
   - name: bump
-    image: node:lts-alpine
+    image: node:lts
     when:
       event:
         - push
