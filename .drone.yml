@@ -35,6 +35,7 @@ steps:
     <<: *on_push
     settings:
       followtags: true
+      remote: git@github.com:Profiscience/eslint-config-profiscience
       key:
         from_secret: GIT_SSH_PUSH_KEY
 
