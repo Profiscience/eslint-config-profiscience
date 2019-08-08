@@ -11,6 +11,10 @@ steps:
     when:
       event:
         - push
+      ref:
+        exclude:
+          - refs/tags/v*
+
     environment:
       GIT_SSH_KEY:
         from_secret: GIT_SSH_PUSH_KEY
