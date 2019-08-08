@@ -18,9 +18,9 @@ steps:
       GIT_SSH_KEY:
         from_secret: GIT_SSH_PUSH_KEY
     commands:
-      # - mkdir ~/.ssh
-      # - echo "$$GIT_SSH_KEY" > ~/.ssh/id_rsa
-      # - echo "github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==" > ~/.ssh/known_hosts
+      - mkdir ~/.ssh
+      - echo "$$GIT_SSH_KEY" > ~/.ssh/id_rsa
+      - echo "github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==" > ~/.ssh/known_hosts
       # - chmod 700 ~/.ssh
       # - chmod 600 ~/.ssh/*
       # - chown -R root:root ~/.ssh
@@ -28,16 +28,7 @@ steps:
       - git config --global user.email buildbot@ci.caseywebb.xyz
       - git remote set-url origin git@github.com:Profiscience/eslint-config-profiscience.git
       - npm version patch
-      # - git push --follow-tags origin master
-
-  - name: push
-    image: appleboy/drone-git-push
-    <<: *on_push
-    settings:
-      followtags: true
-      remote: git@github.com:Profiscience/eslint-config-profiscience
-      key:
-        from_secret: GIT_SSH_PUSH_KEY
+      - git push --follow-tags origin master
 
   - name: publish
     image: plugins/npm
