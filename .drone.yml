@@ -1,20 +1,18 @@
 kind: pipeline
-name: default
+name: version
 
 trigger:
-  branch:
-    - master
+  event:
+    - push
+  refs:
+    include:
+      - refs/heads/master
+    exclude:
+      - refs/tags/v*
 
 steps:
   - name: bump
     image: node:lts
-    when:
-      event:
-        - push
-      ref:
-        exclude:
-          - refs/tags/v*
-
     environment:
       GIT_SSH_KEY:
         from_secret: GIT_SSH_PUSH_KEY
@@ -29,11 +27,19 @@ steps:
       - npm version patch
       - git push --follow-tags origin master
 
+---
+kind: pipeline
+name: publish
+
+trigger:
+  event:
+    - tag
+  refs:
+    - refs/tags/v*
+
+steps:
   - name: publish
     image: plugins/npm
-    when:
-      event:
-        - tag
     settings:
       token:
         from_secret: NPM_TOKEN
