@@ -1,8 +1,3 @@
-on_push: &on_push
-  when:
-    event:
-      - push
-
 kind: pipeline
 name: default
 
@@ -13,7 +8,9 @@ trigger:
 steps:
   - name: bump
     image: node:lts
-    <<: *on_push
+    when:
+      event:
+        - push
     environment:
       GIT_SSH_KEY:
         from_secret: GIT_SSH_PUSH_KEY
