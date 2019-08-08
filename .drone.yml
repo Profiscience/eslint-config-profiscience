@@ -24,7 +24,7 @@ steps:
       - chmod 700 ~/.ssh
       - chmod 600 ~/.ssh/*
       - chown -R root:root ~/.ssh
-      - ssh -i ~/.ssh/id_rsa -vvvvv git@github.com
+      - ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -vvvvv git@github.com
       - git config --global user.name "Drone CI"
       - git config --global user.email buildbot@ci.caseywebb.xyz
       - git remote set-url origin git@github.com:Profiscience/eslint-config-profiscience.git
