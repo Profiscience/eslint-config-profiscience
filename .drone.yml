@@ -21,7 +21,7 @@ steps:
       - git config --global user.name "Drone CI"
       - git config --global user.email buildbot@ci.caseywebb.xyz
       - git remote set-url origin git@github.com:Profiscience/eslint-config-profiscience.git
-      - npm version patch --message "%s $(echo -e "\n\n[CI SKIP]")"
+      - npm version patch --message "%s\n\n[CI SKIP]"
       - git push --follow-tags origin master
 
   - name: publish
