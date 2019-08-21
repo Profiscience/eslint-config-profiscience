@@ -21,6 +21,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
 
   rules: {
-    'no-console': ['error', { allow: ['error', 'info', 'warn'] }]
+    'no-console': ['error', { allow: ['error', 'info', 'warn'] }],
+    '@typescript-eslint/no-use-before-define': ['error', { functions: false }]
   }
 }
