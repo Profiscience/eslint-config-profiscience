@@ -3,6 +3,9 @@ update_configs:
   - package_manager: javascript
     directory: /
     update_schedule: live
+    allowed_updates:
+      - match:
+          update_type: "all"
     automerged_updates:
       - match:
           dependency_type: all
