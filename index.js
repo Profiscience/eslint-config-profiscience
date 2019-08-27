@@ -22,6 +22,7 @@ module.exports = {
 
   rules: {
     'no-console': ['error', { allow: ['error', 'info', 'warn'] }],
+    '@typescript-eslint/explicit-function-return-type': ['warn', { allowExpressions: true }],
     '@typescript-eslint/no-use-before-define': ['error', { functions: false }]
   }
 }
