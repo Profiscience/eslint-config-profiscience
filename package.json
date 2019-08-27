@@ -10,8 +10,8 @@
   "author": "Casey Webb <notcaseywebb@gmail.com> (https://caseyWebb.xyz)",
   "license": "WTFPL",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.10.2",
-    "@typescript-eslint/parser": "^1.10.2",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
     "eslint-config-prettier": "^6.1.0"
   },
   "peerDependencies": {
