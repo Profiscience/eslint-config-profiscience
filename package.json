@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-profiscience",
-  "version": "4.1.5",
+  "version": "4.1.6",
   "description": "Shareable ESLint Config for Profisciencē",
   "main": "index.js",
   "keywords": [
