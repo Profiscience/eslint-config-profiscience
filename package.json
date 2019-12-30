@@ -11,7 +11,7 @@
   "license": "WTFPL",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.13.0",
-    "@typescript-eslint/parser": "^2.13.0",
+    "@typescript-eslint/parser": "^2.14.0",
     "eslint-config-prettier": "^6.9.0"
   },
   "peerDependencies": {
