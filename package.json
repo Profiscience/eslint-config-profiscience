@@ -12,13 +12,11 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
-    "eslint-config-prettier": "^6.10.0"
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1"
   },
   "peerDependencies": {
     "eslint": "^6.0.0",
     "prettier": "^1.0.0"
-  },
-  "devDependencies": {
-    "eslint-plugin-import": "^2.20.1"
   }
 }
