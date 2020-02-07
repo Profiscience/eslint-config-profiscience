@@ -56,8 +56,8 @@ module.exports = {
         pathGroups: [
           {
             pattern: '@profiscience/**',
-            group: 'external',
-            position: 'after'
+            group: 'internal',
+            position: 'before'
           }
         ],
         pathGroupsExcludedImportTypes: [],
@@ -65,8 +65,7 @@ module.exports = {
         alphabetize: { order: 'asc', caseInsensitive: true }
       }
     ],
-    'import/newline-after-import': WARN,
-    'import/prefer-default-export': WARN
+    'import/newline-after-import': WARN
   },
 
   overrides: [
