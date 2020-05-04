@@ -11,12 +11,18 @@
   "license": "WTFPL",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.30.0",
-    "@typescript-eslint/parser": "^2.31.0",
+    "@typescript-eslint/parser": "^2.30.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.20.2"
+    "eslint-plugin-import": "^2.20.2",
+    "snyk": "^1.317.0"
   },
   "peerDependencies": {
     "eslint": "^6.0.0",
     "prettier": "^1.0.0"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
+  },
+  "snyk": true
 }
