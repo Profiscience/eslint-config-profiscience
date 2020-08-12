@@ -28,7 +28,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
 
   rules: {
-    'no-console': ['error', { allow: ['error', 'info', 'warn'] }],
+    'no-console': [WARN, { allow: ['error', 'info', 'warn'] }],
     '@typescript-eslint/explicit-function-return-type': [
       'warn',
       { allowExpressions: true }
