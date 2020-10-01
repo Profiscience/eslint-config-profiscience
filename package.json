@@ -10,13 +10,13 @@
   "author": "Casey Webb <notcaseywebb@gmail.com> (https://caseyWebb.xyz)",
   "license": "WTFPL",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.34.0",
-    "@typescript-eslint/parser": "^2.34.0",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-import": "^2.22.1"
   },
   "peerDependencies": {
-    "eslint": "^6.0.0",
-    "prettier": "^1.0.0"
+    "eslint": "^7.0.0",
+    "prettier": "^2.0.0"
   }
 }
