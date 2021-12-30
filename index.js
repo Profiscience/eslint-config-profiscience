@@ -14,14 +14,8 @@ module.exports = {
     'prettier/@typescript-eslint',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:import/typescript'
+    'plugin:import/typescript',
   ],
-
-  env: {
-    browser: true,
-    node: true,
-    es6: true
-  },
 
   parser: '@typescript-eslint/parser',
 
@@ -31,7 +25,7 @@ module.exports = {
     'no-console': [WARN, { allow: ['error', 'info', 'warn'] }],
     '@typescript-eslint/explicit-function-return-type': [
       'warn',
-      { allowExpressions: true }
+      { allowExpressions: true },
     ],
     '@typescript-eslint/no-use-before-define': [ERROR, { functions: false }],
     'import/no-absolute-path': ERROR,
@@ -51,21 +45,21 @@ module.exports = {
           'internal',
           'parent',
           'sibling',
-          'index'
+          'index',
         ],
         pathGroups: [
           {
             pattern: '@profiscience/**',
             group: 'internal',
-            position: 'before'
-          }
+            position: 'before',
+          },
         ],
         pathGroupsExcludedImportTypes: [],
         'newlines-between': 'always-and-inside-groups',
-        alphabetize: { order: 'asc', caseInsensitive: true }
-      }
+        alphabetize: { order: 'asc', caseInsensitive: true },
+      },
     ],
-    'import/newline-after-import': WARN
+    'import/newline-after-import': WARN,
   },
 
   overrides: [
@@ -75,13 +69,13 @@ module.exports = {
         '**/__tests__/**/*',
         '**/test/**/*',
         '**/tests/**/*',
-        '**/test.*'
+        '**/test.*',
       ],
       rules: {
         '@typescript-eslint/explicit-function-return-type': OFF,
         '@typescript-eslint/no-empty-function': OFF,
-        '@typescript-eslint/no-explicit-any': OFF
-      }
+        '@typescript-eslint/no-explicit-any': OFF,
+      },
     },
     {
       files: ['**/*.ts', '**/*.tsx', '**/*.d.ts'],
@@ -90,8 +84,8 @@ module.exports = {
         'import/named': OFF,
         'import/namespaced': OFF,
         'import/default': OFF,
-        'import/export': OFF
-      }
-    }
-  ]
+        'import/export': OFF,
+      },
+    },
+  ],
 }
