@@ -9,6 +9,9 @@
   ],
   "author": "Casey Webb <notcaseywebb@gmail.com> (https://caseyWebb.xyz)",
   "license": "WTFPL",
+  "scripts": {
+    "lint": "eslint ./"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
@@ -18,5 +21,10 @@
   "peerDependencies": {
     "eslint": "^8.0.0",
     "prettier": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4"
   }
 }
